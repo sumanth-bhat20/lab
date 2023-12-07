@@ -1,0 +1,29 @@
+Step 1
+You have to create an input directory.
+$ $HADOOP_HOME/bin/hadoop fs -mkdir /user/input
+
+Step 2
+Transfer and store a data file from local systems to the Hadoop file system using
+the put command.
+$ $HADOOP_HOME/bin/hadoop fs -put /home/file.txt /user/input
+
+Step 3
+You can verify the file using ls command.
+$ $HADOOP_HOME/bin/hadoop fs -ls /user/input
+
+
+Retrieving files from HDFS
+Assume we have a file in HDFS called outfile. Given below is a simple
+demonstration for retrieving the required file from the Hadoop file system.
+
+Step 1
+Initially, view the data from HDFS using cat command.
+$ $HADOOP_HOME/bin/hadoop fs -cat /user/output/outfile
+
+Step 2
+Get the file from HDFS to the local file system using get command.
+$ $HADOOP_HOME/bin/hadoop fs -get /user/output/ /home/hadoop_tp/
+
+
+Deleting files
+Hdfs dfs -rm -r hdfs://path/ to / file
